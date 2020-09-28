@@ -1,0 +1,40 @@
+
+.nav {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    img {
+      height: 100px;
+    }
+    &>div {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      margin-left: 20px;
+      h1 {
+        margin: 0;
+        margin-bottom: 6px;
+      }
+      div {
+        flex-direction: row;
+        &>span {
+          margin-right: 40px;
+          span{
+              text-decoration: underline;
+          }
+        }
+      }
+    }
+    select::-ms-expand { display: none; }
+    select{
+        border: none;
+        background: transparent;
+        text-decoration: underline;
+        appearance:none;
+        -moz-appearance:none;
+        -webkit-appearance:none;
+        font-size: 16px;
+    }
+    
+  }

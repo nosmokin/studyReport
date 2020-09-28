@@ -1,6 +1,5 @@
 body {
-  margin: 60px;
-  margin-bottom: 80px;
+  margin: 0px;
   box-sizing: border-box;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -14,8 +13,32 @@ code {
     monospace;
 }
 
-a {
-  color: black;
-  text-decoration: none;
-  margin-right: 30px;
+#root{
+  display: flex;
+}
+
+#root #main-page{
+  width: 800px;
+  min-width: 800px;
+  flex-shrink: 0;
+}
+
+#root #options{
+  width: calc(100vw - 800px);
+  min-width: 300px;
+  padding: 16px;
+  border-left: dashed 2px rgb(109, 109, 109);
+}
+
+#options textarea {
+  width: 300px;
+  height: 300px;
+  padding: 0;
+  font-size: 14px;
+  word-break: break-all;
+}
+
+#options input[type="file"]{
+  background: transparent;
+  font-size: 14px;
 }

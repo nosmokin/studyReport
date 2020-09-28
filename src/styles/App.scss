@@ -12,34 +12,7 @@
     margin-left: 6px;
   }
 }
-.nav {
-  display: flex;
-  align-items: center;
-  margin-bottom: 30px;
-  img {
-    height: 100px;
-  }
-  &>div {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    margin-left: 20px;
-    h1 {
-      margin: 0;
-      margin-bottom: 6px;
-    }
-    div {
-      flex-direction: row;
-      &>span {
-        margin-right: 30px;
-        >span {
-          // text-decoration: underline;
-        }
-      }
-    }
-  }
-}
+
 td,tr {
   border: none
 }
@@ -47,7 +20,7 @@ ol {
   padding-inline-start: 20px;
 }
 table {
-  width: calc(100vw - 120px);
+  width: 100%;
   margin-bottom: 40px;
   
 
@@ -55,7 +28,7 @@ table {
     padding: 8px 20px;
     &:first-child{
       text-align: center;
-      width: 120px;
+      width: 100px;
     }
   }
 
@@ -104,6 +77,17 @@ table {
     text-align: center;
   }
 
+  &.performance{
+    & tr:nth-child(2n+1){
+      background-color: rgba(248, 182, 40, 0.068);
+    }
+    & tr:first-child{
+      color: black;
+      font-weight: normal;
+      text-align: center;
+    }
+  }
+
   .check{
     width: 20px;
     height: 20px;
@@ -111,20 +95,45 @@ table {
   }
 }
 
-
-select {
-  /*Chrome和Firefox里面的边框是不一样的，所以复写了一下*/
+input[type="text"]{
+  width: 50px;
+  text-align: right;
   border: none;
-  /*很关键：将默认的select选择框样式清除*/
-  appearance:none;
-  -moz-appearance:none;
-  -webkit-appearance:none;
-  /*将背景改为红色*/
-  background:white;
-  /*加padding防止文字覆盖*/
-  // padding-right: 14px;
-  font-size: 16px;
-  // text-decoration: underline;
+  outline: none;
+  background: transparent;
+  font-size: 14px;
 }
-  /*清除ie的默认选择框样式清除，隐藏下拉箭头*/
-select::-ms-expand { display: none; }
+
+
+
+.score-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  &>div{
+    width: 100%;
+    height: 10px;
+    background-color: rgb(224, 224, 224);
+    border-radius: 4px;
+    &>div{
+      height: 10px;
+      background-color: rgb(255, 184, 53);
+      border-radius: 4px;
+    }
+  }
+  span{
+    display: inline-block;
+    width: 100px;
+    font-size: 14px;
+  }
+}
+
+a {
+  font-size: 14px;
+  color: gray;
+  text-decoration: none;
+}
+a.selected {
+  color: #287cf8;
+  font-weight: bold;
+}
